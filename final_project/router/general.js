@@ -68,7 +68,7 @@ public_users.get('/isbn/:isbn',function (req, res) {
 public_users.get('/isbn/:isbn', function (req, res) {
   const isbn = req.params.isbn;
   
-  axios.get(`https://maddalas-5000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/isbn/${isbn}`)
+  axios.get(`https://andhavarapur-5000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/isbn/${isbn}`)
     .then((response) => {
       const bookDetails = response.data.bookDetails;
       if (bookDetails) {
@@ -108,7 +108,7 @@ public_users.get('/author/:author', function (req, res) {
     const author = req.params.author;
   
     // Make an HTTP GET request to fetch book details by author
-    axios.get(`https://maddalas-5000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/author/${author}`)
+    axios.get(`https://andhavarapur-5000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/author/${author}`)
       .then((response) => {
         const books = response.data.books;
         if (books.length > 0) {
@@ -148,7 +148,7 @@ public_users.get('/title/:title', function (req, res) {
     const title = req.params.title;
   
     // Make an HTTP GET request to fetch book details by title
-    axios.get(`https://maddalas-5000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai//title/${title}`)
+    axios.get(`https://andhavarapur-5000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/title/${title}`)
       .then((response) => {
         const books = response.data.books;
         if (books.length > 0) {
